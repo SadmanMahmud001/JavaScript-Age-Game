@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+}
+
+:root {
+  --main-color: #1abc9c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  cursor:pointer;
+}
+::-webkit-scrollbar-thumb:active{
+  background-color: #12997e;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #89c6ba30;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.container section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container section p {
+  font-size: 30px;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px 40px;
+  box-shadow: 5px 5px 0px var(--main-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  box-shadow: 3px 3px 0px var(--main-color);
+}
+button:active {
+  box-shadow: 0px 0px 0px var(--main-color);
+}
+
+.container input {
+  width: 500px;
+  border: 1px solid black;
+  color: black;
+  background-color: transparent !important;
+  padding: 10px 35px;
+  padding-left: 20px;
+  transition: all 0.3s;
+  box-shadow: 5px 5px 0px var(--main-color);
+}
+
+.container input:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--main-color);
+}
+
+@media (max-width: 540px) {
+  .container input {
+    width: 300px;
+  }
+}
+
+#header {
+  /* background-color: #000000; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-right: 15px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+@media (min-width: 1423px) {
+  header {
+    width: 1800px;
+    margin: auto;
+  }
+  .profile {
+    width: 40% !important;
+  }
+  .right div img {
+    display: none;
+  }
+  .sectionFooter div img {
+    width: 50% !important;
+  }
+}
+
+.LoGo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+}
+
+@media (max-width: 570px) {
+  .LoGo {
+    width: 40%;
+  }
+}
+
+.LoGo img {
+  width: 131px;
+}
+
+.LoGo p {
+  font-size: 33px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+.LoGo p span {
+  color: #1abc9c;
+}
+
+.headerText {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerText ul {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.headerText ul li a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s;
+}
+.headerText ul li a:hover {
+  color: var(--mainColor);
+}
+
+.lastText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  transition: all 0.15s;
+  cursor: pointer;
+  display: none;
+}
+
+.menu svg {
+  fill: black;
+  width: 25px;
+}
+
+@media (max-width: 793px) {
+  .headerText {
+    display: none;
+  }
+  .lastText button {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
+
+main {
+  position: relative;
+}
+
+main .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url("https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif")
+    center/cover no-repeat;
+  height: 100%;
+  z-index: -1;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.cart section {
+  width: 300px;
+  height: 450px;
+  border: 1px solid #888888;
+  box-shadow: 10px 10px 0px #49a99e40;
+}
+
+.cartImage {
+  width: 300px;
+}
+.cartImage img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .cart section {
+    width: 400px;
+    height: 500px;
+  }
+  .cartImage {
+    width: 400px;
+  }
+  .cartImage img {
+    height: 400px;
+  }
+}
+
+.cartText {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartText button {
+  width: fit-content;
+}
+.cartText button a {
+  color: black;
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.myInfo p{
+  font-size: 13px;
+}
+
+.myInfo p a{
+  color: var(--main-color);
+  position: relative;
+}
+
+.myInfo p a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--main-color);
+  transition: all .3s;
+  width: 0;
+}
+
+.myInfo p a:hover::after{
+  width: 100%;
+}
+
+.socialMedia{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.socialMedia a{
+  font-size: 20px;
+  color: black;
+}
+
+.reload{
+  position: fixed;
+  top: 540px;
+  right: 30px;
+  /* display: none; */
+}
+
+.reload button{
+  background-color: #E6F3F2;
+  padding: 5px 10px;
+  font-size: 12px !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+
+:root {
+    --main-color: #1abc9c;
+}
+
+/* Additional styling remains the same */
+
+/* Specific elements like header, footer, cart, and main content styles */
+
+/* Add media queries for responsive design */
+@media (max-width: 793px) {
+    .headerText {
+        display: none;
+    }
+    .lastText button {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+}
