@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", system-ui;
+  transition: all .3s;
 }
 
 :root {
@@ -235,6 +236,8 @@ main .bgImage {
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .cart section {
@@ -242,6 +245,15 @@ main .bgImage {
   height: 450px;
   border: 1px solid #888888;
   box-shadow: 10px 10px 0px #49a99e40;
+  transition: all .3s;
+}
+
+.cart section:hover{
+  box-shadow: 6px 6px 0px #49a99e40;
+}
+
+.cart section:active{
+  box-shadow: 0px 0px 0px #49a99e40;
 }
 
 .cartImage {
@@ -256,7 +268,7 @@ main .bgImage {
 @media (max-width: 500px) {
   .cart section {
     width: 400px;
-    height: 500px;
+    height: 550px;
   }
   .cartImage {
     width: 400px;
@@ -286,6 +298,9 @@ footer{
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 1300px;
 }
 
 .myInfo p{
@@ -335,34 +350,4 @@ footer{
   background-color: #E6F3F2;
   padding: 5px 10px;
   font-size: 12px !important;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", system-ui;
-}
-
-:root {
-    --main-color: #1abc9c;
-}
-
-/* Additional styling remains the same */
-
-/* Specific elements like header, footer, cart, and main content styles */
-
-/* Add media queries for responsive design */
-@media (max-width: 793px) {
-    .headerText {
-        display: none;
-    }
-    .lastText button {
-        display: none;
-    }
-    .menu {
-        display: flex;
-    }
 }
