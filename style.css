@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", system-ui;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 :root {
@@ -17,9 +17,9 @@
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  cursor:pointer;
+  cursor: pointer;
 }
-::-webkit-scrollbar-thumb:active{
+::-webkit-scrollbar-thumb:active {
   background-color: #12997e;
 }
 ::-webkit-scrollbar-track {
@@ -245,14 +245,14 @@ main .bgImage {
   height: 450px;
   border: 1px solid #888888;
   box-shadow: 10px 10px 0px #49a99e40;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.cart section:hover{
+.cart section:hover {
   box-shadow: 6px 6px 0px #49a99e40;
 }
 
-.cart section:active{
+.cart section:active {
   box-shadow: 0px 0px 0px #49a99e40;
 }
 
@@ -292,8 +292,7 @@ main .bgImage {
   color: black;
 }
 
-
-footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -303,16 +302,27 @@ footer{
   max-width: 1300px;
 }
 
-.myInfo p{
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.myInfo {
+  text-align: center;
+}
+
+.myInfo p {
   font-size: 13px;
 }
 
-.myInfo p a{
+.myInfo p a {
   color: var(--main-color);
   position: relative;
 }
 
-.myInfo p a::after{
+.myInfo p a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -320,34 +330,33 @@ footer{
   right: 0;
   height: 1px;
   background-color: var(--main-color);
-  transition: all .3s;
+  transition: all 0.3s;
   width: 0;
 }
 
-.myInfo p a:hover::after{
+.myInfo p a:hover::after {
   width: 100%;
 }
 
-.socialMedia{
+.socialMedia {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.socialMedia a{
+.socialMedia a {
   font-size: 20px;
   color: black;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.reload{
-  position: fixed;
-  top: 540px;
-  right: 30px;
-  /* display: none; */
+.socialMedia .fa-youtube:hover {
+  color: #ff0033;
 }
-
-.reload button{
-  background-color: #E6F3F2;
-  padding: 5px 10px;
-  font-size: 12px !important;
+.socialMedia .fa-facebook:hover {
+  color: #0866ff;
+}
+.socialMedia .fa-instagram:hover {
+  color: #cb00eb;
 }

@@ -114,17 +114,10 @@ function gameFunction() {
           `${inputValue} The Number is to long. And there is no chance you are still alive!`
         );
       } else {
-        alert("Enter your age a Number.");
+        alert("Enter your age.");
       }
-
-      reload.style.display = "block";
     });
   }
   mainFunction();
-
-  document.getElementById("reloadBtn").addEventListener("click", function () {
-    location.reload();
-    reload.style.display = "none";
-  });
 }
 gameFunction();
