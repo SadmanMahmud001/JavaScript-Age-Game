@@ -113,10 +113,21 @@ function gameFunction() {
       } else {
         alert("Enter your age.");
       }
-
-      // reload.style.display = "block";
     });
   }
   mainFunction();
 }
 gameFunction();
+
+let menu = document.querySelector(".menu");
+let hoverHeaderText = document.querySelector(".hoverHeaderText");
+hoverHeaderText.style.maxHeight = "0px";
+
+menu.addEventListener("click", function () {
+  if (hoverHeaderText.style.maxHeight === "0px") {
+    hoverHeaderText.style.maxHeight = "250px";
+  } else {
+    hoverHeaderText.style.maxHeight = "0px";
+  }
+});
+
