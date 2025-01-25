@@ -32,9 +32,6 @@ function gameFunction() {
 
   document.querySelector("#die .cartText p").innerHTML = aliveText;
 
-  let reload = document.querySelector(".reload");
-  reload.style.display = "none";
-
   function mainFunction() {
     document.getElementById("submit").addEventListener("click", function () {
       let inputValue = parseInt(input.value);
@@ -116,6 +113,8 @@ function gameFunction() {
       } else {
         alert("Enter your age.");
       }
+
+      // reload.style.display = "block";
     });
   }
   mainFunction();
